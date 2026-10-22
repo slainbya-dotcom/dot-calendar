@@ -1,8 +1,8 @@
 # Dot Calendar
 
-A quietly motivating desktop widget for Windows and macOS, from the same family as [World Time](https://github.com/slainbya-dotcom/world-time), Dot Timer and Dot Focus. It shows dot-matrix progress bars for how far through the current minute, hour, day, week, month and year you are.
+A quietly motivating desktop widget for Windows and macOS. It shows dot-matrix progress bars for how far through the current minute, hour, day, week, month and year you are.
 
-<!-- Add a screenshot as docs/images/widget.png and uncomment: ![Dot Calendar](docs/images/widget.png) -->
+![Dot Calendar](docs/images/widget.png)
 
 ## What it does
 
@@ -37,5 +37,5 @@ With all six on, it reads as the current second, minute, hour, day, week and mon
 
 See [BUILDING.md](BUILDING.md). The installer is called `Dot Calendar_1.0.0_x64_en-US.msi`.
 
-<!-- Add a screenshot as docs/images/widget.png and uncomment: ![Dot Calendar](docs/images/settings-1.png) -->
-<!-- Add a screenshot as docs/images/widget.png and uncomment: ![Dot Calendar](docs/images/settings-2.png) -->
+![Dot Calendar](docs/images/settings-1.png)
+![Dot Calendar](docs/images/settings-2.png)

@@ -38,4 +38,8 @@ With all six on, it reads as the current second, minute, hour, day, week and mon
 See [BUILDING.md](BUILDING.md). The installer is called `Dot Calendar_1.0.0_x64_en-US.msi`.
 
 ![Dot Calendar](docs/images/settings-1.png)
+<<<<<<< Updated upstream
 ![Dot Calendar](docs/images/settings-2.png)
+=======
+![Dot Calendar](docs/images/settings-2.png)
+>>>>>>> Stashed changes

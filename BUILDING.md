@@ -2,22 +2,7 @@
 
 The `.msi` has to be built on Windows and the `.dmg` on macOS. The steps are the same as for World Time.
 
-## Option A: GitHub Actions
-
-There are two separate workflows, so a slow Mac build never holds up the Windows one:
-
-| Workflow | Makes | File |
-|---|---|---|
-| **Build Windows installer** | `.msi` | `.github/workflows/build.yml` |
-| **Build macOS installer** | `.dmg` (Intel + Apple Silicon) | `.github/workflows/build-macos.yml` |
-
-1. Push this folder to its own GitHub repository, for example `dot-calendar`.
-2. Go to **Actions**, pick a workflow on the left, and click **Run workflow**.
-3. Open the run, scroll to the bottom of its Summary page, and download the installer from **Artifacts**.
-
-Pushing a tag such as `v1.0.0` also builds the Windows `.msi` and puts it in a draft GitHub release.
-
-## Option B: build locally
+## build locally
 
 ### Windows (makes the .msi)
 
@@ -72,5 +57,5 @@ tests/               Node tests
 
 - **The link to World Time is by identifier.** "Match World Time" finds World Time's settings using its app identifier, `app.worldtime.dotmatrix`. If you change that identifier in World Time's `tauri.conf.json`, also change `WORLD_TIME_ID` at the top of `src-tauri/src/lib.rs` here.
 - **Test the chimes in the installed app.** On Windows the app tells WebView2 it may play sound without a click first (`additionalBrowserArgs` in `tauri.conf.json`). On macOS, check that a bar filling on its own makes a sound.
-- **The installers aren't code-signed.** As with World Time, Windows will show a SmartScreen warning and macOS needs **Privacy & Security › Open Anyway**.
+- **The installers aren't code-signed.** Windows will show a SmartScreen warning and macOS needs **Privacy & Security › Open Anyway**.
 - **Replace the placeholder identifier** `app.worldtime.dotcalendar` in `src-tauri/tauri.conf.json` if you like.

@@ -206,8 +206,8 @@
     $('out-volume').textContent = Math.round(state.volume * 100) + '%';
     $('opt-match').checked = state.matchWorldTime;
     $('match-status').textContent = !state.matchWorldTime ? 'Using the settings below.'
-      : wtLook ? `Matched to World Time: ${wtLook.width} dots wide, ${wtLook.dotSize} px dots. Change its look in World Time.`
-        : 'World Time isn’t installed (or hasn’t been run yet), so the settings below are used.';
+      : wtLook ? `Matched to Dot Clock: ${wtLook.width} dots wide, ${wtLook.dotSize} px dots. Change its look in Dot Clock.`
+        : 'Dot Clock isn’t installed (or hasn’t been run yet), so the settings below are used.';
     $('look-fields').disabled = matched();
     const L = matched() ? wtLook : state;
     $('opt-dot').value = L.dotColor;
@@ -286,7 +286,7 @@
   bind();
   buildGallery();
   renderAll();
-  $('about').textContent = 'Dot Calendar 1.0.0 · works fully offline';
+  $('about').textContent = 'Dot Calendar 1.1.0 · works fully offline';
   setInterval(() => { if (!document.hidden) refreshLive(); }, 500);
   setInterval(refreshWorldTime, 3000);
 })();
